@@ -172,7 +172,8 @@ header{
 .sidebar{
     width: 20rem;
     height: 100vh;
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background-color: #f1f1eb;
     position: fixed;
     top: 0;
     right: -20rem;
@@ -229,6 +230,7 @@ header{
 }
 
 .conhecimentos{
+  
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 6rem);
@@ -262,6 +264,9 @@ header{
 .conhecimento:nth-child(6){
     grid-column: 11 / 14;
     grid-row: 5 / -1;
+}
+.sessao-conhecimento{
+    background-color: #f1f1eb;
 }
 
 .sessao-header{
@@ -303,4 +308,92 @@ header{
 .conhecimentos-img-wrapper img{
     object-fit: cover;
     width: 100%;
+}
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 22rem;
+    height: 32rem;
+    position: relative;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img{
+    opacity: .5;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 0%;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.4);
+    transition: all .3s;
+}
+
+.card-info h2{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #eee;
+}
+
+.card-info h3{
+    font-family: var(--font-action);
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #0052D4;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p{
+    font-family: var(--font-secundy);
+    color: #eee;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    background: #0052D4; 
+    background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);
+    background: linear-gradient(to left, #6FB1FC, #4364F7, #0052D4); 
+    font-family: var(--font-action);
+    font-size: .9rem;
+    color: #eee;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    
+}
+.card button:hover{
+    background: #090ca8;   
+}
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
 }
